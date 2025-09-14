@@ -1,0 +1,120 @@
+/* ======================== */
+/* Global and Body Styles */
+/* ======================== */
+body.AdminDasboard {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  max-width: 1300px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* ======================== */
+/* Dashboard Layout and Sections */
+/* ======================== */
+.dashboard-header {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px 40px;
+  background-image: linear-gradient(135deg, #2563eb, #1e3a8a);
+  border-radius: 12px;
+  margin-bottom: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dashboard-section {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 35px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-left: 10px;
+  border-left: 5px solid #16a34a;
+}
+
+/* ======================== */
+/* Table Styles */
+/* ======================== */
+.dashboard-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  text-align: left;
+}
+
+.dashboard-table thead tr th {
+  padding: 15px 20px;
+  font-weight: 600;
+  color: #1e3a8a;
+  background-color: #e0f2fe;
+}
+
+.dashboard-table tbody tr {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.dashboard-table tbody tr:hover {
+  background-color: #f5f7fa;
+  transform: scale(1.01);
+}
+
+.dashboard-table tbody tr td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dashboard-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.order-id-cell { width: 10%; }
+.user-id-cell { width: 10%; }
+.item-cell { width: 15%; }
+.name-cell { width: 25%; }
+.quantity-cell { width: 10%; }
+.qr-code-cell { width: 15%; text-align: center; }
+
+/* ======================== */
+/* Scrollbar Styling (Optional) */
+/* ======================== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e2e8f0;
+}

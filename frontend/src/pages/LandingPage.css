@@ -1,0 +1,411 @@
+/* ======================== */
+/* Global and Body Styles */
+/* ======================== */
+html, body{
+  margin: 0; /* Ensure no default margin */
+  padding: 0; /* Ensure no default padding */
+  overflow-x: hidden; /* This removes the horizontal scrollbar */
+  width: 100%; /* Ensure they take up full width */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8; /* This is the background of the actual page */
+  color: #333;
+  padding-top: 70px; 
+  /* Added padding to prevent content from being hidden by fixed header */
+  /* If you want the pink gradient for the entire background, apply it here */
+  /* background-image: linear-gradient(135deg, #fce3e7 0%, #a9d3e8 100%); */
+}
+
+/* Add this to your existing CSS file if you want the pink gradient across the whole page background */
+.landing-page-container {
+  background-image: linear-gradient(135deg, #fce3e7 0%, #a9d3e8 100%); /* Apply gradient here */
+  min-height: calc(100vh - 80px); /* Ensure it covers full height below fixed header */
+  width: 100%; /* Ensure it spans full width */
+  overflow: hidden; /* Contains any overflowing elements within */
+}
+
+
+/* ======================== */
+/* Header Styles */
+/* ======================== */
+.main-header {
+  position: fixed; /* Fixes the header to the top of the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures the header is on top of other content */
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon-placeholder {
+  width: 30px;
+  height: 30px;
+  background-color: #2563eb;
+  border-radius: 50%;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.header-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header-button.citizen {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.header-button.citizen:hover {
+  background-color: #1e40af;
+}
+
+.header-button.admin {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.header-button.admin:hover {
+  background-color: #cbd5e0;
+}
+
+/* ======================== */
+/* Main Content and Hero Section */
+/* ======================== */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: white;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+.initiative-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #4a5568;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+  background-color: #16a34a;
+  color: #ffffff;
+}
+
+.cta-button.primary:hover {
+  background-color: #15803d;
+}
+
+.cta-button.secondary {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.cta-button.secondary:hover {
+  background-color: #cbd5e0;
+}
+
+/* ======================== */
+/* Stats Section */
+/* ======================== */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #2563eb; /* default icon color */
+}
+
+.stat-card:nth-child(2) .stat-icon { color: #16a34a; }
+.stat-card:nth-child(3) .stat-icon { color: #f59e0b; }
+.stat-card:nth-child(4) .stat-icon { color: #8b5cf6; }
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin: 0;
+}
+
+.stat-text {
+  font-size: 1rem;
+  color: #4a5568;
+  margin: 0;
+}
+
+/* ======================== */
+/* How It Works Section */
+/* ======================== */
+.how-it-works-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.step-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.step-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.step-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.step-text {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* ======================== */
+/* Info Card Section */
+/* ======================== */
+.info-card-section {
+  margin-bottom: 3rem;
+}
+
+.info-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-top: 0;
+}
+
+.info-card-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.info-card-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.details-column {
+  flex: 1;
+}
+
+.details-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.details-text {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* ======================== */
+/* Footer Styles */
+/* ======================== */
+.main-footer {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  padding: 2rem;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #3b82f6;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-description {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: #a9d3e8;
+}
+
+.footer-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #a9d3e8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-contact {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #a9d3e8;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  color: #a9d3e8;
+}
+
+/* ======================== */
+/* Mobile Responsiveness */
+/* ======================== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .header-buttons {
+    flex-direction: column;
+  }
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
